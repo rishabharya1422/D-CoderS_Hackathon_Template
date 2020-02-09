@@ -1,0 +1,22 @@
+#navbar-tp{
+    background-color: #ccedd2;
+}
+body{
+  background-color: #effcef;
+}
+
+#id1{
+    height: 150px;
+
+}
+
+input{
+    padding: 5px;
+    width: 50%;
+}
+
+textarea{
+    padding: 5px;
+    width: 60%;
+
+}

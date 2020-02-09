@@ -1,0 +1,132 @@
+<!Doctype Html>
+<html>
+    <head>
+        <title>SMIT Placement Cell-Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style type="text/css"></style>
+
+    </head>
+    <body>
+
+
+        <nav id="navbar-tp" class="navbar navbar-expand-lg navbar-light">
+
+            <a class="navbar-brand" href="#">
+                <img src="../assets/pict.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <b>SMIT PLACEMENT CELL</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-         controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Home/check22.html" style="color: black;">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" style="color: black;">Contact us</a>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="../Admin/adminlogin.html" style="color: black;">Admin</a>
+                </li>
+
+
+
+            </ul>
+            </div>
+        </nav>
+
+
+
+        <div id="id1" class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4"><u>CONTACT US</u></h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+            <div class="col-sm">
+                <h3>OUR LOCATION</h3>
+                <p>
+                  Majitar, East Sikkim - 737136, Sikkim, India<br />
+                  E-mail: admission.smit@smu.edu.in<br />
+                  Phone No. : +91 9735110007/ 9635527557
+                </p>
+            </div>
+            <div class="col-sm">
+                <h3>CONTACT US</h3>
+                <p>
+                    Phone: +91 9735110007 <br />
+                    Email: <a href="admission.smit@smu.edu.in">admission.smit@smu.edu.in</a>
+                </p>
+            </div>
+            <div class="col-sm">
+              <div class="container">
+                  <form id="contactForm" action="contactsdata.php" method="post">
+                      <input type="text" name="name" id="name" placeholder="Name" required><br><br>
+                      <input type="email" name="email" id="email" placeholder="Email" required><br><br>
+                      <input type="tel" name="phone" id="phone" placeholder="Phone" required><br><br>
+                      <textarea name="msg" id="msg" placeholder="Message" required></textarea><br><br>
+
+                      <input type="submit" name="Submit" id="Submit" value="Send message"  style="background-color: #009CDA">
+
+                  </form>
+
+
+            </div>
+
+
+        </div>
+
+
+        <script src="../Dist/jquery-3.3.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function()
+            {
+                  function validateName(name){
+                    return /^[a-zA-z ]+$/.test(name);
+                }
+                function validateNumber(num){
+                    return $.isNumeric(num);
+                }
+
+                $("#contactForm").submit(function(event)
+                {
+                    var name= $("#name").val();
+                    var num = $("#phone").val();
+                    var flag=0;
+
+                    if(!validateName(name))
+                        {
+                            alert("Enter valid name!");
+                            flag = 1;
+
+                        }
+                    if(!validateNumber(num) || num.length != 10){
+
+                        alert("Enter valid number");
+                        flag=1;
+                    }
+
+                    if(flag==1)
+                        return false;
+                    else{
+                        alert("Success");
+                        return true;
+                    }
+                })
+
+            })
+
+
+        </script>
+
+
+    </body>
+</html>

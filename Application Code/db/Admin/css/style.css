@@ -1,0 +1,33 @@
+#navbar-tp{
+    background-color: #94d3ac;
+}
+
+#id1{
+    height: 150px;
+
+}
+
+.pict_color{
+    background-color: #94d3ac;
+}
+td{
+	padding: 10px;
+}
+textarea{
+	resize: none;
+	border-radius:3px;
+	padding: 10px;
+}
+input{
+	border-radius: 3px;
+	padding: 10px;
+}
+input{
+	background-color: #effcef;
+	color: black;
+	border: solid 1px black;
+
+}
+input:focus{
+	box-shadow: 2px 2px 3px #333;
+}
